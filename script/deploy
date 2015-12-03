@@ -1,11 +1,11 @@
 #!/bin/sh
  
 #ssh app@APP.SERVER.IP.ADDRESS <<EOF
-ssh rebaca@115.119.242.25 <<EOF
-  cd ~/hello-jenkins
-  git pull
-  npm install --production
-  forever restartall
-  exit
-EOF
+su rebaca
+cd ~/appserver/hello-jenkins
+git pull
+npm install --production
+forever restartall
+exit
+
 
